@@ -1,4 +1,3 @@
-import chromadb
 
 class VectorStore:
     def __init__(self):
