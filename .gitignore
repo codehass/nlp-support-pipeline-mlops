@@ -21,3 +21,4 @@ models/*
 # IDE
 .vscode/
 .idea/
+src/data/dataset.csv
