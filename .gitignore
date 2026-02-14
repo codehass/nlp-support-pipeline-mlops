@@ -23,4 +23,3 @@ models/*
 .idea/
 src/data/dataset.csv
 notebooks/ticket_vector_db
-notebooks/best_email_classifier.pkl
