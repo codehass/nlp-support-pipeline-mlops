@@ -11,7 +11,8 @@ ENV CUDA_VISIBLE_DEVICES=-1
 COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen --no-dev
 
-COPY notebooks/best_email_classifier.pkl ./best_email_classifier.pkl
+RUN mkdir -p notebooks
+COPY notebooks/best_email_classifier.pkl notebooks/best_email_classifier.pkl
 COPY main.py .
 
 RUN uv run python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')"
