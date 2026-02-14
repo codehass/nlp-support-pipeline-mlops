@@ -40,6 +40,7 @@ An end-to-end Machine Learning pipeline for automated support ticket classificat
 ### Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone <repository-url>
    cd nlp-support-pipeline-mlops
@@ -92,3 +93,27 @@ Run the container:
 ```bash
 docker run nlp-support-pipeline
 ```
+
+## Docker & Monitoring Stack
+
+The project uses a multi-container architecture for the monitoring suite, which can run alongside the NLP pipeline.
+
+### 1. Build and Launch the Monitoring Stack
+
+Start the Prometheus, Grafana, and resource exporters with a single command:
+
+```bash
+docker compose up -d
+```
+
+### 2. Accessing Services
+
+The following services will be available:
+
+| Service | URL | Usage |
+| :--- | :--- | :--- |
+| **Prometheus** | `http://localhost:9090` | Query raw hardware/container metrics |
+| **Grafana** | `http://localhost:3000` | View visual dashboards (Default: admin/admin) |
+| **cAdvisor** | `http://localhost:8080` | Real-time container resource usage |
+| **Node Exporter** | `http://localhost:9100` | Hardware and OS metrics |
+
