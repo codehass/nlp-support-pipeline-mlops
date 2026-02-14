@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 from sentence_transformers import SentenceTransformer
 
-# 1. Configuration
 MODEL_PATH = "notebooks/best_email_classifier.pkl"
 TRANSFORMER_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
 
